@@ -1,7 +1,7 @@
 {
   "name": "fcs-editor",
   "version": "0.1.0",
-  "description": "IM-FormaDesignerに設定したカスタムスクリプトを俯瞰的に編集するための補助エディタです",
+  "description": "IM-FormaDesignerに設定したカスタムスクリプトをzipファイルから読み込み、俯瞰的に編集するための補助エディタです",
   "homepage": "https://github.com/rinne-grid/fcs-editor",
   "author": {
     "name": "rinne-grid"

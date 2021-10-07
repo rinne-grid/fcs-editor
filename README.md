@@ -15,7 +15,12 @@ IM-FormaDesignerで登録したカスタムスクリプト数が膨大になっ�
 
 ## アプリのダウンロード・インストール
 
-[リリースページ](https://github.com/rinne-grid/fcs-editor/releases)よりfcs-editor Setup x.x.x.exeを見つけてダウンロードします
+[リリースページ](https://github.com/rinne-grid/fcs-editor/releases)からダウンロードできます
+
+* Windows
+  * fcs-editor.Setup.x.x.x.exeを見つけてダウンロードします
+* macOS
+  * fcs-editor-x.x.x.dmgを見つけてダウンロードします
 
 ## アプリ操作方法
 
