@@ -1,0 +1,115 @@
+[mat-dialog-title] {
+  margin: -24px -24px 0px -24px !important;
+  padding: 10px 12px;
+  background: #369;
+  color: #fff;
+  cursor: move;
+  font-size: 1.0rem;
+}
+
+[mat-dialog-content] {
+  height: 100%;
+}
+
+.search-dialog-title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-dialog-close {
+  width: 30px;
+  display: flex;
+  margin-left: auto;
+  text-align: right;
+}
+
+// 検索・置換キーワードと検索モードの領域
+.search-area-table {
+  width: 100%;
+}
+
+//.search-form {
+//  width: 100%;
+//  padding: 0;
+//
+//}
+
+// 検索・置換キーワードインプット
+.search-keyword {
+ width: 95%;
+ font-size: 1.2rem;
+ height: 20px;
+ border: 1px solid #bbb;
+}
+
+// 検索モードトグルボタンのセル
+.search-mode-td {
+  width: 10%;
+  padding: 0;
+}
+
+// 検索モードトグルボタングループ
+.search-mode {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+// 検索結果の表示領域
+.search-result-area {
+  height: 30%;
+  overflow-y: scroll;
+}
+
+// 検索結果表示用のカード
+.search-result-card {
+  height: 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+// 検索結果表示用カードをクリックした際の背景カラー指定
+$search-result-card-selected-color: 186;
+.search-result-card-selected {
+  background-color: rgba($search-result-card-selected-color, $search-result-card-selected-color, $search-result-card-selected-color, 0.5);
+}
+
+// 検索結果表示用カード内: ソースコードスニペットの表示部分
+.search-result-code-snippet {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// 検索結果表示用カード内: ソースコード名の表示部分
+.search-result-code-name {
+  display: flex;
+  margin-left: auto;
+  user-select: none;
+}
+
+// 検索結果表示用エディタ
+#search_editor {
+  width: 100%;
+}
+
+// 検索結果表示
+.search-editor-style {
+  height: 30vh;
+  border: 1px solid #bbb;
+}
+
+.replace-editor-style {
+  height: 20vh;
+  border: 1px solid #bbb;
+}
+
+
+.replace-button-area {
+  text-align: right;
+  padding: 10px;
+}
+
+.replace-button {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}

@@ -1,0 +1,21 @@
+//.tab-icon-end {
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//}
+
+.tab_label {
+  justify-content: left;
+  text-align: left;
+}
+
+.mat-icon {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: right;
+  margin-left: 50px;
+}
+
+.mat-icon:hover {
+  color: #0097fb;
+}

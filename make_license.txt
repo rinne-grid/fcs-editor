@@ -1,0 +1,5 @@
+.\node_modules\.bin\license-checker --production --relativeLicensePath --json --customPath ./custom_format.json --out ./open_source_software.json
+# src: renderer
+.\node_modules\.bin\license-checker --production --relativeLicensePath --csv --customPath ./custom_format.json --out ./open_source_software.csv
+# app: main
+.\node_modules\.bin\license-checker --production --relativeLicensePath --csv --customPath ../custom_format.json --out ./open_source_software.csv

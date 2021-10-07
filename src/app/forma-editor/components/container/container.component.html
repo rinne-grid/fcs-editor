@@ -1,0 +1,41 @@
+<mat-drawer-container style="min-height:100vh">
+  <mat-drawer mode="side" opened class="side__main" style="min-width: 35vh;">
+  <!-- サイドナビゲーションメニュー -->
+    <app-side></app-side>
+  </mat-drawer>
+
+  <mat-drawer-content style="height: 50px;">
+    <div class="tab__main">
+      <app-tab></app-tab>
+    </div>
+
+  </mat-drawer-content>
+<!--  <mat-drawer-content style="height: 61vh;overflow:hidden;">-->
+  <mat-drawer-content style="height: 59vh;overflow:hidden;">
+    <div>
+      <app-main-edit></app-main-edit>
+    </div>
+  </mat-drawer-content>
+  <mat-drawer-content>
+
+    <div style="border: 1px solid #ddd; padding: 10px; height: 300px;">
+      <mat-form-field appearance="fill" style="width: 80vw;">
+        <ng-container *ngIf="this.formaScriptType !== 'item'; else itemLabel">
+          <mat-label>説明</mat-label>
+        </ng-container>
+        <ng-template #itemLabel>
+          <mat-label>ラベル</mat-label>
+        </ng-template>
+        <textarea matInput [(ngModel)]="formaExplain" (ngModelChange)="setCurrentSourceExplain()" [mat-autosize]="true" [matAutosizeMinRows]="getExplainAreaRowSize()" [matAutosizeMaxRows]="getExplainAreaRowSize()"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="width: 80vw;">
+        <ng-container *ngIf="this.formaScriptType !== 'item'; else itemName">
+          <mat-label>条件</mat-label>
+        </ng-container>
+        <ng-template #itemName>アイテム名</ng-template>
+        <textarea matInput [(ngModel)]="formaCondition" (ngModelChange)="setCurrentSourceCondition()" [mat-autosize]="true" [matAutosizeMinRows]="getConditionAreaRowSize()" [matAutosizeMaxRows]="getConditionAreaRowSize()" ></textarea>
+      </mat-form-field>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+<input type="file" style="display: none" id="upload_zip_file_container" (change)="uploadZipFile($event)" #upload_zip_file>

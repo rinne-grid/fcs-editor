@@ -1,0 +1,30 @@
+{
+  "name": "fcs-editor",
+  "description": "IM-FormaDesignerに設定したカスタムスクリプトを俯瞰的に編集するための補助エディタです",
+  "homepage": "https://github.com/rinne-grid/fcs-editor",
+  "author": {
+    "name": "rinne-grid"
+  },
+  "version": "0.1.0",
+  "main": "main.js",
+  "private": true,
+  "dependencies": {
+    "@electron/remote": "1.0.4",
+    "archiver": "5.3.0",
+    "license-checker": "^25.0.1",
+    "monaco-editor": "0.24.0",
+    "unzipper": "0.10.11",
+    "xml2js": "0.4.23"
+  },
+  "eslintIgnore": [
+    "/.eslintrc.json"
+  ],
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "spectron": "^15.0.0",
+    "ts-jest": "^27.0.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

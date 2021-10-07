@@ -1,0 +1,74 @@
+<h1 mat-dialog-title cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>
+<!--<h1 mat-dialog-title >-->
+  <span class="search-dialog-title">
+  {{this.data.dialogTitle}} - 実験的機能
+    <span class="search-dialog-close">
+      <button mat-icon-button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </span>
+  </span>
+</h1>
+<div>
+</div>
+<div mat-dialog-content>
+  <table class="search-area-table">
+    <tr>
+      <td>
+<!--        <mat-form-field appearance="fill" class="search-form">-->
+<!--          <input #searchKeyword matInput (keydown.enter)="this.searchSourceCode($event)">-->
+          <input #searchKeyword
+            (keydown.enter)="searchSourceCode($event)"
+            class="search-keyword"
+            placeholder="検索したいキーワードを入力"
+            >
+<!--        </mat-form-field>-->
+      </td>
+      <td class="search-mode-td">
+        <mat-button-toggle-group [multiple]="true" [(ngModel)]="searchMode" class="search-mode" >
+          <mat-button-toggle value="match_case">Aa</mat-button-toggle>
+          <mat-button-toggle value="wild_card">.*</mat-button-toggle>
+        </mat-button-toggle-group>
+      </td>
+    </tr>
+    <tr *ngIf="this.data.isReplace">
+      <td>
+<!--        <mat-form-field appearance="fill" class="search-form">-->
+<!--          <input #replaceKeyword class="search-keyword" matInput (keydown.enter)="null">-->
+          <input
+            [(ngModel)]="replaceKeyword"
+            class="search-keyword"
+            placeholder="置換したいキーワードを入力"
+            >
+<!--        </mat-form-field>-->
+      </td>
+    </tr>
+  </table>
+  <div class="search-result-area">
+      <mat-card
+        *ngFor="let result of this.searchResultList"
+        (click)="clickResultCode($event, result)"
+        (dblclick)="openResultCode($event, result)"
+        [class.search-result-card-selected]="this.currentSourcePrimaryKeyStr === result.sourcePrimaryKey+result.sourceName+result.rowNumber"
+        class="search-result-card"
+      >
+        <mat-card-header>
+          <div class="search-result-code-snippet">{{result.sourceSnippet | slice:0:80}}</div>
+          <div class="search-result-code-name">{{result.sourceName}} {{result.rowNumber}}</div>
+        </mat-card-header>
+      </mat-card>
+
+  </div>
+   <div id="search_editor" style="height: 30vh;">
+   </div>
+</div>
+<div mat-dialog-actions align="end" *ngIf="this.data.isReplace">
+    <button
+      (click)="this.replaceSourceCode()"
+      [disabled]="!this.searchResultList || this.searchResultList.length === 0"
+      class="replace-button"
+      color="warn"
+      mat-raised-button
+    >
+    すべて置換
+    </button>
+<!--    <button class="replace-button" color="primary" mat-raised-button>置換</button>-->
+</div>

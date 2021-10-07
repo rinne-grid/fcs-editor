@@ -1,0 +1,10 @@
+<div id="start_container">
+  <div class="start_box">
+    <h1><span class="brand_color">F</span>orma<span class="brand_color">C</span>ustom<span class="brand_color">S</span>cript-<span class="brand_color">Editor</span> for IM-FormaDesigner</h1>
+  </div>
+  <div class="start_box" style="font-size: 1.5rem;">FCS-Editorへようこそ。IM-FormaDesignerのカスタムスクリプトを編集しましょう</div>
+  <div class="start_box" id="start_open_forma">
+    <button mat-raised-button color="primary"  (click)="upload_zip_file.click()" class="open-forma-button" id="open_forma_button">Forma定義を開く</button>
+  </div>
+</div>
+<input type="file" accept=".zip" style="display: none" id="upload_zip_file" (change)="uploadZipFile($event)" #upload_zip_file>

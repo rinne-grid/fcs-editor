@@ -1,0 +1,9 @@
+<mat-tab-group [selectedIndex]="selected.value" (selectedTabChange)="selectedTabChange($event)">
+  <template *ngFor="let item of items">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        {{item.virtualName}}<mat-icon (click)="closeTab($event, item.primaryKey)">close</mat-icon>
+      </ng-template>
+    </mat-tab>
+  </template>
+</mat-tab-group>
