@@ -1,4 +1,4 @@
-# FCSEditor for IM-LogicDesigner
+# FCSEditor for IM-FormaDesigner
 
 ## 概要
 
